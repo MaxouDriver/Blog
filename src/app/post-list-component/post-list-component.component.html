@@ -1,7 +1,4 @@
-<div class="container">
-  <div class="row">
-    <div class="list-group col-md-10 offset-md-1">
-      <app-post-list-item-component *ngFor="let p of posts" [post]="p"></app-post-list-item-component>
-    </div>
-  </div>
-</div>
+<app-post-list-item-component *ngFor="let p of posts let i = index" 
+    [post]="p"
+    [index]="i"></app-post-list-item-component>
+    

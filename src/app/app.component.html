@@ -1,6 +1,14 @@
 <!--The content below is only a placeholder and can be replaced.-->
+<app-navbar></app-navbar>
 <app-header></app-header>
-<app-post-list-component [posts]="posts"></app-post-list-component>
+<div class="container">
+    <div class="row">
+        <div class="list-group col-md-10 offset-md-1">
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>
+
 
 
 

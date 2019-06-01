@@ -1,0 +1,30 @@
+<div [ngClass]="{'card': true, 'list-group-item-success': post.getLoveIts() > 0, 'list-group-item-danger': post.getLoveIts() < 0}" style="width: 100%;">
+  <div class="card-body">
+    <div class="container">
+      <div class="row">
+          <div class="col-9">
+              <h5 class="card-title">{{post.title}}</h5>
+          </div>
+          <div class="col-3">
+              <h6 class="card-subtitle mb-2 text-muted">{{post.created_at | date: 'short'}}</h6>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-12">
+              <p class="card-text">{{post.content}}</p>
+          </div>
+      </div>
+  
+      <div class="row">
+          <div class="col-10">
+              <button type="button" class="btn btn-success" (click)="onLike()">Love it!</button>
+              <button type="button" class="btn btn-danger" (click)="onDislike()">Don't love it!</button>
+          </div>
+          <div class="col-2">
+              <button type="button" class="btn btn-danger" (click)="remove()">Delete</button>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
